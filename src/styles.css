@@ -30,6 +30,7 @@
 
 navlink { cursor: pointer; }
 navlink:hover { color: #27f; transition: .3s ease-in-out; }
+a { text-decoration: none; color: #eee; }
 
 ::-webkit-scrollbar {
    width: 10px;
@@ -224,4 +225,82 @@ tabela > *,
    border: #970 2px solid;
    margin: 0;
    padding: 1vw;
+}
+
+
+drawer {
+   display: grid;
+   grid-template-rows: max-content 1fr;
+   position: fixed;
+   top: 0;
+   font: 0;
+   width: 48px;
+   height: 100vh;
+   background: #1b1d22;
+   filter: drop-shadow( #0005 0px 0 13px );
+}
+drawer-logo {
+   width: 100%;
+   aspect-ratio: 1/1;
+   margin: 2vw auto;
+   display: grid;
+   place-items: center;
+}
+drawer-logo > img {
+   width: 100%;
+   border-radius: 55rem;
+}
+drawer-home {
+   display: grid;
+   gap: 2vw;
+   justify-content: center;
+   grid-template-rows: repeat( auto-fill, 48px);
+}
+drawer-home > * {
+   display: grid;
+   place-items: center;
+   width: 90%;
+   margin: 0 auto;
+   background: #313339;
+   aspect-ratio: 1/1;
+   border-radius: 55rem;
+   overflow: hidden;
+}
+sub-menu {
+   background: #1d1e27;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   font-weight: bold;
+   box-shadow: #00000050 3px 3px 6px;
+   position: absolute;
+   left: 100%;
+   top: -10px;
+   margin-top: 0;
+   padding: 10px 20px;
+   border-radius: 0 6px 6px 0;
+   opacity: 0;
+   display: block;
+   pointer-events: none;
+   transition: 0s;
+
+}
+drawer-home > *:hover sub-menu {
+   position: absolute;
+   top: 2vw; left: 50px;
+   width: 100vw;
+   padding: 4vw;
+   opacity: 1;
+   pointer-events: auto;
+   transition: all 0.3s ease;
+}
+
+main {
+   width: calc( 100% - 48px );
+   min-height: 100vh;
+   position: absolute;
+   left: 46px;
+}
+
+iframe {
+   width: 100%; min-height: 100vh;
 }

@@ -23,7 +23,9 @@ window.addEventListener( "load", () => {
       P = $$( "[p]" ),
       Columns = $$( "[columns]" ),
       Rows = $$( "[rows]" ),
-      Tabela = $$( "[tabela]" )
+      Tabela = $$( "[tabela]" ),
+
+      DLink = $$( "d-link > a" )
    ;
 
 
@@ -71,5 +73,16 @@ window.addEventListener( "load", () => {
 
    Focus.forEach( img => img.addEventListener( "click", ev => {
    } ) );
+
+   DLink.forEach( d => { 
+      d.addEventListener( "touchstart", ev => {
+         switch( d.innerText ) {
+         case "01": {
+            d.title = "oi";
+         }
+            break;
+         }
+      } );
+   } );
 
 } );
