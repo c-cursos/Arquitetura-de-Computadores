@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html lang='pt-br'>
+   <head>
+      <title>05 - Portas Lógicas</title>
+      
+      <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
+      <meta charset='UTF-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+      <link rel="stylesheet" href="./src/styles.css">
+      <script src="./src/script.js" defer></script>
+      <style>
+         [pix] { width: 100%; } 
+      </style>
+   </head>
+   <body>
+      <appbar>
+         <appbar-body>
+            <appbar-brand></appbar-brand>
+            <t1></t1>
+            <appbar-options></appbar-options>
+         </appbar-body>
+      </appbar>
+
+      <header bg="#16181c" center>
+         <h1 c="#459">Portas Lógicas e suas Funções</h1>
+         <small>
+         </small>
+         <banner>
+         </banner>
+      </header>
+      <main card p="2vw">
+         <header>
+            <h2>Elementos eletrônicos</h2>
+            <small>
+               <p>
+                  <b>capacitores: </b>
+                  armazenar e liberar carga elétrica, filtrar ruídos, estabilizar tensões, temporizar sinais
+               </p>
+               <p>
+                  <b>resistor: </b>
+                  limitar a corrente elétrica medida em ohms (Ω),
+                  ajustando s níveis de tensão
+               </p>
+               <p>
+                  <b>transistor: </b>
+                  é semicondutor e usado para amplificar sinais,
+                  ou controlar o fluxo de corrente
+               </p>
+            </small>
+         </header>
+         <transistor card>
+            <h2>Transistores</h2>
+            <p>
+               são componentes que precisam armazenar os sinais bin e realizar operações com eles
+            </p>
+            <p>
+               a passagem desses sinais são através de 
+               <b>portas lógicas </b>
+            </p>
+            <p><b>circuitos lógicos: </b>circuitos que contem as portas lógicas</p>
+
+            <p>
+               a porta lógica é a base para a construção de um sistema digital
+            </p>
+         </transistor>
+
+         <algebra-de-chaveamento>
+            <h2>Álgebra de chaveamentos</h2>
+            <small>
+               qualquer operação lógica sempre vai resultar um dois possiveis valores: 
+               <b>"1" true ou "0" false</b>
+            </small>
+         </algebra-de-chaveamento>
+
+         <portas>
+            <h3>Tabela de portas lógicas</h3>
+            <list tabela="repeat(3, 33.3%)">
+               <t>Função Lógica</t>
+               <t>Symbol</t>
+               <t>Equação Booleana</t>
+               
+               <t>NOT</t>
+               <t>
+                  <img src="./src/pix/logic/NOT-.png">
+               </t>
+               <t>Q = Ã</t>
+
+               <t>AND</t>
+               <t>
+                  <img src="./src/pix/logic/AND-.png">
+               </t>
+               <t>Q = A.B</t>
+
+               <t>NAND</t>
+               <t>
+                  <img src="./src/pix/logic/NAND-.png">
+               </t>
+               <t>Q = Ã.~B</t>
+
+               <t>OR</t>
+               <t>
+                  <img src="./src/pix/logic/OR-.png">
+               </t>
+               <t>Q = A + B</t>
+
+               <t>NOR</t>
+               <t>
+                  <img src="./src/pix/logic/NOR-.png">
+               </t>
+               <t>Q = Ã + ~B</t>
+
+               <t>XOR</t>
+               <t>
+                  <img src="./src/pix/logic/XOR-.png">
+               </t>
+               <t>Q = A ⊕ B</t>
+
+               <t>XNOR</t>
+               <t>
+                  <img src="./src/pix/logic/XNOR-.png">
+               </t>
+               <t>Q = Ã ⊕ ~B</t>
+            </list>
+
+            <ci-logicos>
+               <h3>Circuitos Lógicos</h3>
+               <img src="./src/pix/portas/CI Logicos.png" pix="">
+            </ci-logicos>
+
+            <expressoes-logicas>
+               <h3>Expressões Lógicas</h3>
+               <img src="./src/pix/portas/expressões lógicas.png" pix="">
+            </expressoes-logicas>
+
+            <ul>
+               <li>
+                  <and>
+                     <oc>
+                        <it>
+                           <h4>Porta AND
+                           </h4>
+                        </it>
+                        <it>
+                           <img src="./src/pix/portas/AND.png" pix=""> 
+                           <br>
+                           <tabela tabela="repeat(3, 33.3%)">
+                              <t>A</t>
+                              <t>B</t>
+                              <t>Y = A.B</t>
+
+                              <t>1</t>
+                              <t>1</t>
+                              <t>1</t>
+                              
+                              <t>1</t>
+                              <t>0</t>
+                              <t>0</t>
+                              
+                              <t>0</t>
+                              <t>1</t>
+                              <t>0</t>
+                              
+                              <t>0</t>
+                              <t>0</t>
+                              <t>0</t>
+                              
+                           </tabela>
+                        </it>
+                     </oc>
+                  </and>
+               </li>
+
+               <li>
+                  <or>
+                     <oc>
+                        <it>
+                           <h4>Porta OR
+                           </h4>
+                        </it>
+                        <it p="1vw">
+                           <img src="./src/pix/portas/OR.png" pix="">
+                           <br>
+                           <tabela tabela="repeat(3, 33.3%)">
+                              <t>A</t>
+                              <t>B</t>
+                              <t>Y = A + B</t>
+
+                              <t>1</t>
+                              <t>1</t>
+                              <t>1</t>
+                              
+                              <t>1</t>
+                              <t>0</t>
+                              <t>1</t>
+                              
+                              <t>0</t>
+                              <t>1</t>
+                              <t>1</t>
+                              
+                              <t>0</t>
+                              <t>0</t>
+                              <t>0</t>
+                              
+                           </tabela>
+                        </it>
+                     </oc>
+                  </or>
+               </li>
+
+               <li>
+                  <xor>
+                     <oc>
+                        <it>
+                           <h4>Porta XOR
+                           </h4>
+                        </it>
+                        <it>
+                           <img src="./src/pix/portas/XOR.png" pix="">
+                           <tabela tabela="repeat(3, clamp(100px, 33%, 500px))">
+                              <t>A </t>
+                              <t>B </t>
+                              <t>Y = A ⊕ B</t>
+
+                              <t>1</t>
+                              <t>1</t>
+                              <t>0</t>
+                              
+                              <t>1</t>
+                              <t>0</t>
+                              <t>1</t>
+                              
+                              <t>0</t>
+                              <t>1</t>
+                              <t>1</t>
+                              
+                              <t>0</t>
+                              <t>0</t>
+                              <t>0</t>
+                              
+                           </tabela>
+                        </it>
+                     </oc>
+                  </xor>
+               </li>
+
+               <li>
+                  <not>
+                     <oc>
+                        <it>
+                           <h4>
+                              Porta NOT
+                           </h4>
+                        </it>
+                        <it>
+                           <img src="./src/pix/portas/NOT.png" pix=""><br>
+                           <tabela tabela="repeat(2, 50%)">
+                              <t>A </t>
+                              <t>Y = Ã</t>
+                              
+                              <t>0</t>
+                              <t>1</t>
+                              
+                              <t>1</t>
+                              <t>0</t>
+                              
+                           </tabela>
+                        </it>
+                     </oc>
+                  </not>
+               </li>
+            </ul>
+         </portas>
+
+         <questoes>
+            <h2 center>Questões</h2>
+
+            <h3>Questão 1</h3>
+            <img src="./src/pix/portas/questões/qst 1.png" alt="" pix="">
+
+            <h3>Questão 2</h3>
+            <img src="./src/pix/portas/questões/qst 2.png" alt="" pix="">
+
+            <h3>Questão 3</h3>
+            <img src="./src/pix/portas/questões/qst 3.png" alt="" pix="">
+         </questoes>
+
+
+
+
+
+
+
+
+
+         <!-- <gates-list>
+            <table class="wikitable">
+
+               <tbody><tr>
+               <th rowspan="2" width="100">
+               <p>Gate
+               </p>
+               </th>
+               <th colspan="2">
+               <p>ANSI/IEEE Symbol
+               </p>
+               </th>
+               <th colspan="2">
+               <p>IEC and ANSI/IEEE Symbol
+               </p>
+               </th>
+               <th colspan="2">
+               <p>DIN Symbol (obsolete)
+               </p>
+               </th></tr>
+               <tr>
+               <th>Not Labelled</th>
+               <th>Labelled</th>
+               <th>Not Labelled</th>
+               <th>Labelled</th>
+               <th>Not Labelled</th>
+               <th>Labelled
+               </th></tr>
+               <tr>
+               <th>Buffer
+               </th>
+               <td><span ><a href="/wiki/File:Buffer_ANSI.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Buffer_ANSI.svg/100px-Buffer_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Buffer_ANSI.svg/150px-Buffer_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Buffer_ANSI.svg/200px-Buffer_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:Buffer_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Buffer_ANSI_Labelled.svg/120px-Buffer_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Buffer_ANSI_Labelled.svg/180px-Buffer_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Buffer_ANSI_Labelled.svg/240px-Buffer_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:Buffer_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Buffer_IEC.svg/100px-Buffer_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Buffer_IEC.svg/150px-Buffer_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Buffer_IEC.svg/200px-Buffer_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:Buffer_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Buffer_IEC_Labelled.svg/120px-Buffer_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Buffer_IEC_Labelled.svg/180px-Buffer_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Buffer_IEC_Labelled.svg/240px-Buffer_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:Buffer_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Buffer_DIN.svg/100px-Buffer_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Buffer_DIN.svg/150px-Buffer_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Buffer_DIN.svg/200px-Buffer_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-buf-de.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Logic-gate-buf-de.svg/150px-Logic-gate-buf-de.svg.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Logic-gate-buf-de.svg/225px-Logic-gate-buf-de.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Logic-gate-buf-de.svg/300px-Logic-gate-buf-de.svg.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <th>NOT
+               </th>
+               <td><span ><a href="/wiki/File:NOT_ANSI.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/NOT_ANSI.svg/100px-NOT_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/NOT_ANSI.svg/150px-NOT_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/NOT_ANSI.svg/200px-NOT_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:NOT_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/NOT_ANSI_Labelled.svg/120px-NOT_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/NOT_ANSI_Labelled.svg/180px-NOT_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/NOT_ANSI_Labelled.svg/240px-NOT_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:NOT_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/NOT_IEC.svg/100px-NOT_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/NOT_IEC.svg/150px-NOT_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/NOT_IEC.svg/200px-NOT_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:NOT_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/NOT_IEC_Labelled.svg/120px-NOT_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/NOT_IEC_Labelled.svg/180px-NOT_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/NOT_IEC_Labelled.svg/240px-NOT_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:NOT_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NOT_DIN.svg/100px-NOT_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NOT_DIN.svg/150px-NOT_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/NOT_DIN.svg/200px-NOT_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-inv-de.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Logic-gate-inv-de.png/150px-Logic-gate-inv-de.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Logic-gate-inv-de.png/225px-Logic-gate-inv-de.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Logic-gate-inv-de.png/300px-Logic-gate-inv-de.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <th>AND
+               </th>
+               <td><span ><a href="/wiki/File:AND_ANSI.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/AND_ANSI.svg/100px-AND_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/AND_ANSI.svg/150px-AND_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/AND_ANSI.svg/200px-AND_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:AND_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AND_ANSI_Labelled.svg/120px-AND_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AND_ANSI_Labelled.svg/180px-AND_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AND_ANSI_Labelled.svg/240px-AND_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:AND_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/AND_IEC.svg/100px-AND_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/AND_IEC.svg/150px-AND_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/AND_IEC.svg/200px-AND_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:AND_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/AND_IEC_Labelled.svg/120px-AND_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/AND_IEC_Labelled.svg/180px-AND_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/AND_IEC_Labelled.svg/240px-AND_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:AND_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/AND_DIN.svg/100px-AND_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/AND_DIN.svg/150px-AND_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/AND_DIN.svg/200px-AND_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-and-de.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Logic-gate-and-de.svg/150px-Logic-gate-and-de.svg.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Logic-gate-and-de.svg/225px-Logic-gate-and-de.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Logic-gate-and-de.svg/300px-Logic-gate-and-de.svg.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <th>NAND
+               </th>
+               <td><span ><a href="/wiki/File:NAND_ANSI.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/NAND_ANSI.svg/100px-NAND_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/NAND_ANSI.svg/150px-NAND_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/NAND_ANSI.svg/200px-NAND_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:NAND_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NAND_ANSI_Labelled.svg/120px-NAND_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NAND_ANSI_Labelled.svg/180px-NAND_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/NAND_ANSI_Labelled.svg/240px-NAND_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:NAND_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NAND_IEC.svg/100px-NAND_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NAND_IEC.svg/150px-NAND_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NAND_IEC.svg/200px-NAND_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:NAND_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/NAND_IEC_Labelled.svg/120px-NAND_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/NAND_IEC_Labelled.svg/180px-NAND_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/NAND_IEC_Labelled.svg/240px-NAND_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:NAND_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NAND_DIN.svg/100px-NAND_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NAND_DIN.svg/150px-NAND_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NAND_DIN.svg/200px-NAND_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-nand-de.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Logic-gate-nand-de.svg/150px-Logic-gate-nand-de.svg.png" decoding="async" width="150" height="81" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Logic-gate-nand-de.svg/225px-Logic-gate-nand-de.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Logic-gate-nand-de.svg/300px-Logic-gate-nand-de.svg.png 2x" data-file-width="488" data-file-height="262"></a></span>
+               </td></tr>
+               <tr>
+               <th>OR
+               </th>
+               <td><span ><a href="/wiki/File:OR_ANSI.svg"  >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/OR_ANSI.svg/100px-OR_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/OR_ANSI.svg/150px-OR_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/OR_ANSI.svg/200px-OR_ANSI.svg.png 2x" data-file-width="100" data-file-height="50">
+               </a></span></td>
+               <td><span ><a href="/wiki/File:OR_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/OR_ANSI_Labelled.svg/120px-OR_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/OR_ANSI_Labelled.svg/180px-OR_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/OR_ANSI_Labelled.svg/240px-OR_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:OR_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/OR_IEC.svg/100px-OR_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/OR_IEC.svg/150px-OR_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/OR_IEC.svg/200px-OR_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:OR_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/OR_IEC_Labelled.svg/120px-OR_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/OR_IEC_Labelled.svg/180px-OR_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/OR_IEC_Labelled.svg/240px-OR_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:OR_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/OR_DIN.svg/100px-OR_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/OR_DIN.svg/150px-OR_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/OR_DIN.svg/200px-OR_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-or-de.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logic-gate-or-de.png/150px-Logic-gate-or-de.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logic-gate-or-de.png/225px-Logic-gate-or-de.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logic-gate-or-de.png/300px-Logic-gate-or-de.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <th>NOR
+               </th>
+               <td><span ><a href="/wiki/File:NOR_ANSI.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/NOR_ANSI.svg/100px-NOR_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/NOR_ANSI.svg/150px-NOR_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/NOR_ANSI.svg/200px-NOR_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:NOR_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/NOR_ANSI_Labelled.svg/120px-NOR_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/NOR_ANSI_Labelled.svg/180px-NOR_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/NOR_ANSI_Labelled.svg/240px-NOR_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:NOR_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/NOR_IEC.svg/100px-NOR_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/NOR_IEC.svg/150px-NOR_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/NOR_IEC.svg/200px-NOR_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td><span ><a href="/wiki/File:NOR_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/NOR_IEC_Labelled.svg/120px-NOR_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/NOR_IEC_Labelled.svg/180px-NOR_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/NOR_IEC_Labelled.svg/240px-NOR_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:NOR_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/NOR_DIN.svg/100px-NOR_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/NOR_DIN.svg/150px-NOR_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/NOR_DIN.svg/200px-NOR_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-nor-de.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Logic-gate-nor-de.png/150px-Logic-gate-nor-de.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Logic-gate-nor-de.png/225px-Logic-gate-nor-de.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Logic-gate-nor-de.png/300px-Logic-gate-nor-de.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <th rowspan="2">
+               <p>XOR
+               </p>
+               </th>
+               <td rowspan="2"><span ><a href="/wiki/File:XOR_ANSI.svg"  >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/100px-XOR_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/150px-XOR_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/200px-XOR_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td rowspan="2"><span ><a href="/wiki/File:XOR_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/XOR_ANSI_Labelled.svg/120px-XOR_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/XOR_ANSI_Labelled.svg/180px-XOR_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/XOR_ANSI_Labelled.svg/240px-XOR_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td rowspan="2"><span ><a href="/wiki/File:XOR_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/XOR_IEC.svg/100px-XOR_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/XOR_IEC.svg/150px-XOR_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/XOR_IEC.svg/200px-XOR_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td rowspan="2"><span ><a href="/wiki/File:XOR_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/XOR_IEC_Labelled.svg/120px-XOR_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/XOR_IEC_Labelled.svg/180px-XOR_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/XOR_IEC_Labelled.svg/240px-XOR_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:XOR_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/XOR_DIN.svg/100px-XOR_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/XOR_DIN.svg/150px-XOR_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/XOR_DIN.svg/200px-XOR_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-xor-de.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Logic-gate-xor-de.png/150px-Logic-gate-xor-de.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Logic-gate-xor-de.png/225px-Logic-gate-xor-de.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Logic-gate-xor-de.png/300px-Logic-gate-xor-de.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <td><span ><a href="/wiki/File:XOR_DIN_2.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/XOR_DIN_2.svg/100px-XOR_DIN_2.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/XOR_DIN_2.svg/150px-XOR_DIN_2.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/XOR_DIN_2.svg/200px-XOR_DIN_2.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-xor-de-2.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logic-gate-xor-de-2.png/150px-Logic-gate-xor-de-2.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logic-gate-xor-de-2.png/225px-Logic-gate-xor-de-2.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logic-gate-xor-de-2.png/300px-Logic-gate-xor-de-2.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <th rowspan="2">
+               <p>XNOR
+               </p>
+               </th>
+               <td rowspan="2"><span ><a href="/wiki/File:XNOR_ANSI.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/100px-XNOR_ANSI.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/150px-XNOR_ANSI.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/200px-XNOR_ANSI.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td rowspan="2"><span ><a href="/wiki/File:XNOR_ANSI_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/XNOR_ANSI_Labelled.svg/120px-XNOR_ANSI_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/XNOR_ANSI_Labelled.svg/180px-XNOR_ANSI_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/XNOR_ANSI_Labelled.svg/240px-XNOR_ANSI_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td rowspan="2"><span ><a href="/wiki/File:XNOR_IEC.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/XNOR_IEC.svg/100px-XNOR_IEC.svg.png" decoding="async" width="100" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/XNOR_IEC.svg/150px-XNOR_IEC.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/XNOR_IEC.svg/200px-XNOR_IEC.svg.png 2x" data-file-width="100" data-file-height="50"></a></span></td>
+               <td rowspan="2"><span ><a href="/wiki/File:XNOR_IEC_Labelled.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/XNOR_IEC_Labelled.svg/120px-XNOR_IEC_Labelled.svg.png" decoding="async" width="120" height="50" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/XNOR_IEC_Labelled.svg/180px-XNOR_IEC_Labelled.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/XNOR_IEC_Labelled.svg/240px-XNOR_IEC_Labelled.svg.png 2x" data-file-width="120" data-file-height="50"></a></span>
+               </td>
+               <td><span ><a href="/wiki/File:XNOR_DIN.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/XNOR_DIN.svg/100px-XNOR_DIN.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/XNOR_DIN.svg/150px-XNOR_DIN.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/XNOR_DIN.svg/200px-XNOR_DIN.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-xnor-de.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Logic-gate-xnor-de.png/150px-Logic-gate-xnor-de.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Logic-gate-xnor-de.png/225px-Logic-gate-xnor-de.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Logic-gate-xnor-de.png/300px-Logic-gate-xnor-de.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr>
+               <tr>
+               <td><span ><a href="/wiki/File:XNOR_DIN_2.svg"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/XNOR_DIN_2.svg/100px-XNOR_DIN_2.svg.png" decoding="async" width="100" height="80" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/XNOR_DIN_2.svg/150px-XNOR_DIN_2.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/XNOR_DIN_2.svg/200px-XNOR_DIN_2.svg.png 2x" data-file-width="100" data-file-height="80"></a></span></td>
+               <td><span ><a href="/wiki/File:Logic-gate-xnor-de-2.png"  ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logic-gate-xnor-de-2.png/150px-Logic-gate-xnor-de-2.png" decoding="async" width="150" height="66" class="mw-file-element" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logic-gate-xnor-de-2.png/225px-Logic-gate-xnor-de-2.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logic-gate-xnor-de-2.png/300px-Logic-gate-xnor-de-2.png 2x" data-file-width="640" data-file-height="282"></a></span>
+               </td></tr></tbody></table>
+         </gates-list> -->
+      </main>
+
+   </body>
+</html>
+

@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html lang='pt-br'>
+   <head>
+      <title>04 - Tabela Verdade</title>
+      
+      <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
+      <meta charset='UTF-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+      <link rel="stylesheet" href="./src/styles.css">
+      <script src="./src/script.js" defer></script>
+   </head>
+   <body>
+      <appbar>
+         <appbar-body>
+            <appbar-brand></appbar-brand>
+            <t1></t1>
+            <appbar-options></appbar-options>
+         </appbar-body>
+      </appbar>
+
+      <header>
+         <center>
+            <h1>Estudo da Tabela Verdade</h1>
+            <small>
+               determina se o valor lógico de uma expressão é booleana
+            </small>
+         </center>
+         <banner>
+            <ul>
+               <li>construir circuitos lógicos</li>
+               <li>verificar a validade de proposições lógicas</li>
+            </ul>
+         </banner>
+      </header>
+      <main card>
+         <header>
+            <h1></h1>
+            <h2>Proposião Lógica</h2>
+            <p>"se hoje é segunda-feira, então amanhã é terça-feira"</p>
+            <small>
+               <b>conectivos lógicos: </b>
+               <p>se, então, e, ou</p>
+            </small>
+            
+         </header>
+         <proposicao-logica>
+            <p>
+               são divididas em simples e composta
+            </p>
+
+            <h4>simples</h4>
+            <small>
+               <ul>
+                  <li>
+                     não fazem uso de conectivos lógicos, com exeção do conectivo de negação
+                  </li>
+                  <li>
+                     são representadas por letras minusculas ex. p: q: r: ...
+                  </li>
+               </ul>
+            </small>
+
+            <h4>composta</h4>
+            <small>
+               <ul>
+                  <li>
+                     são representadas por letras maiusculas
+                  </li>
+               </ul>
+            </small>
+
+            <conectivos-logicos>
+               <h2>conectivos lógicos</h2>
+               <ul>
+                  <li>
+                     <oc>
+                        <item>
+                           negação <b>"não" ~</b> ou <b>¬</b> 
+                        </item>
+                        <item>
+                           <tabela tabela="repeat(2, 100px)">
+                              <t-item>p </t-item>
+                              <t-item>~p </t-item>
+                              <t-item>V </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>V </t-item>
+                           </tabela>
+                        </item>
+                     </oc>
+                  </li>
+                  <li>
+                     <oc>
+                        <item>
+                           conjunção <b>"e" ^</b>
+                        </item>
+                        <item>
+                           <tabela>
+                              <t-item>p </t-item>
+                              <t-item>q </t-item>
+                              <t-item>p^q </t-item>
+
+                              <t-item>V </t-item>
+                              <t-item>V </t-item>
+                              <t-item>V </t-item>
+
+                              <t-item>V </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+
+                              <t-item>F </t-item>
+                              <t-item>V </t-item>
+                              <t-item>F </t-item>
+
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                           </tabela>
+                        </item>
+                     </oc>
+                  </li>
+                  <li>
+                     <oc>
+                        <item>
+                           disjunção <b>"ou" v</b> ou <b>|</b>
+                        </item>
+                        <item>
+                           <tabela>
+                              <t-item>p </t-item>
+                              <t-item>q </t-item>
+                              <t-item>p v q </t-item>
+
+                              <t-item>V </t-item>
+                              <t-item>V </t-item>
+                              <t-item>V </t-item>
+
+                              <t-item>V </t-item>
+                              <t-item>F </t-item>
+                              <t-item>V </t-item>
+
+                              <t-item>F </t-item>
+                              <t-item>V </t-item>
+                              <t-item>V </t-item>
+
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                           </tabela>
+                        </item>
+                     </oc>
+                  </li>
+                  <li>
+                     <oc>
+                        <item>
+                           condicional <b>"se, então" →</b>
+                        </item>
+                        <item>
+                           <tabela>
+                              <t-item>p</t-item>
+                              <t-item>q</t-item>
+                              <t-item>p → q</t-item>
+                              <t-item>V</t-item>
+                              <t-item>V</t-item>
+                              <t-item>V</t-item>
+                              <t-item>V</t-item>
+                              <t-item>F</t-item>
+                              <t-item>F</t-item>
+                              <t-item>F</t-item>
+                              <t-item>V</t-item>
+                              <t-item>V</t-item>
+                              <t-item>F</t-item>
+                              <t-item>F</t-item>
+                              <t-item>V</t-item>
+                           </tabela>
+                        </item>
+                     </oc>
+                  </li>
+                  <li>
+                     <oc>
+                        <item>
+                           biCondicional <b>"se, e somente se" ↔</b>
+                        </item>
+                        <item>
+                           <tabela>
+                              <t-item>p </t-item>
+                              <t-item>q </t-item>
+                              <t-item>p ↔ q </t-item>
+                              <t-item>V</t-item>
+                              <t-item>V</t-item>
+                              <t-item>V</t-item>
+                              <t-item>V </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>V </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>F </t-item>
+                              <t-item>V </t-item>
+                           </tabela>
+                        </item>
+                     </oc>
+                  </li>
+               </ul>
+            </conectivos-logicos>
+         </proposicao-logica>
+      </main>
+
+   </body>
+</html>
+
+
+<!-- 
+   0
+   1
+   10
+   11
+   100
+   101
+   110
+   111
+   1000
+
+   8/2 0
+   4/2 0
+   2/2 0
+   1   1
+
+   A6
+   10 * 160**1   
+   160
+
+   6 * 96**0
+   6
+
+   
+
+   111
+   110
+   1101
+
+
+
+
+
+
+   bin 2> 10, 8, 16
+   --------------------------------
+
+   11011101010    
+      10 
+         1    1   0    1  1  1  0  1 0 1 0
+         1024 512 256 128 64 32 16 8 4 2 1
+          
+         1024
+          512
+          128
+           64
+           32
+            8
+            2
+         ----
+         1770
+
+         
+
+      8  
+         011 011 101 010
+          3   3   5   2
+      16 
+         0110 1110 1010
+             6 14 10
+             6 E A  
+
+   11001101101    
+      10 
+         011 001 101 101    
+      8  
+      16 
+
+   1000001111     
+      10 
+      8  
+      16 
+
+   11101100010    
+      10 
+      8  
+      16 
+
+   111001101001   
+      10 
+      8  
+      16 
+
+
+
+
+
+
+      65% of 30
+      10% 3
+      5%  1.5
+      6 * 3 = 18 + 1.5 = 19.5
+ -->
