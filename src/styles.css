@@ -238,6 +238,7 @@ drawer {
    height: 100vh;
    background: #1b1d22;
    filter: drop-shadow( #0005 0px 0 13px );
+   z-index: 9;
 }
 drawer-logo {
    width: 100%;

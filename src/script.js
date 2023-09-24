@@ -25,7 +25,8 @@ window.addEventListener( "load", () => {
       Rows = $$( "[rows]" ),
       Tabela = $$( "[tabela]" ),
 
-      DLink = $$( "d-link > a" )
+      DLink = $$( "d-link > a" ),
+      start = $( "drawer-logo" )
    ;
 
 
@@ -83,6 +84,10 @@ window.addEventListener( "load", () => {
             break;
          }
       } );
+   } );
+
+   start.addEventListener( "click", ev => {
+      open( "./index.html", "_self" );
    } );
 
 } );
