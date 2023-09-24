@@ -27,8 +27,87 @@ addEventListener( "load", () => {
       Rows = $$( "[rows]" ),
       Tabela = $$( "[tabela]" ),
 
-      DLink = $$( "d-link > a" ),
+      // DLink = $$( "d-link > a" ),
       start = $( "drawer-logo" )
+   ;
+
+   const 
+      drawerHomeTemplate = `
+      <style>
+         d-link {
+            display: grid;
+            place-items: center;
+            width: 90%;
+            margin: 0 auto;
+            background: #313339;
+            aspect-ratio: 1/1;
+            border-radius: 55rem;
+            overflow: hidden;
+         }
+         a {
+            text-decoration: none;
+            color: #eee;
+         }
+         sub-menu {
+            background: #1d1e27;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            font-weight: bold;
+            box-shadow: #00000050 3px 3px 6px;
+            position: absolute;
+            left: 100%;
+            top: -10px;
+            margin-top: 0;
+            padding: 10px 20px;
+            border-radius: 0 6px 6px 0;
+            opacity: 0;
+            display: block;
+            pointer-events: none;
+            transition: 0s;
+         
+         }
+         drawer-home > *:hover sub-menu {
+            position: absolute;
+            top: 2vw; left: 50px;
+            width: 100vw;
+            padding: 4vw;
+            opacity: 1;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+         }
+      </style>
+      <d-link>
+      <a href="./01 - evolução dos computadores.html">
+         01
+      </a>
+      <sub-menu>
+         01 - evolução dos computadores
+      </sub-menu>
+      </d-link>
+      <d-link>
+         <a href="./02 - Componentes do Computador.html">
+            02
+         </a>
+         <sub-menu>02 - Componentes do Computador</sub-menu>
+      </d-link>
+      <d-link>
+         <a href="./03 - Sistemas de Numeração.html">
+            03
+         </a>
+         <sub-menu>03 - Sistemas de Numeração</sub-menu>
+      </d-link>
+      <d-link>
+         <a href="./04 - Tabela Verdade.html">
+            04
+         </a>
+         <sub-menu>04 - Tabela Verdade</sub-menu>
+      </d-link>
+      <d-link>
+         <a href="./05 - Portas Lógicas.html">
+            05
+         </a>
+         <sub-menu>05 - Portas Lógicas</sub-menu>
+      </d-link> `
    ;
 
 
@@ -78,17 +157,55 @@ addEventListener( "load", () => {
    Focus.forEach( img => img.addEventListener( "click", ev => {
    } ) );
 
-   DLink.forEach( d => { 
-      // d.addEventListener( "touchstart", ev => {
-      d.addEventListener( "dragstart", ev => {
-         switch( d.innerText ) {
-         case "01": {
-            d.title = "oi";
-         }
-            break;
-         }
-      } );
-   } );
+   /* == [ drawer links template ] == == == == == == == == == */
+   class DrawerHome extends HTMLElement {
+      constructor() {
+         super();
+         let drawer = document.createElement( "template" );
+         drawer.innerHTML = drawerHomeTemplate;
+         this.attachShadow( { mode: "open" } );
+         this.shadowRoot.append( drawer.content.cloneNode( true ) );
+         // this.shadowRoot.querySelector( "img" ).src = this.getAttribute( "src" );
+         this.shadowRoot.querySelector( "img" ).alt = this.getAttribute( "alt" );
+      } 
+      connectedCallback() {
+         this.render();
+         // let 
+         //    btn = this.shadowRoot.querySelector( "button" )
+         // ;
+         // btn.addEventListener( "click", ev => {
+         //    cardBase.style.transform = "rotateY( 180deg )";
+         // } );
+
+         let DLink = this.shadowroot.querySelectorAll( "d-link > a" );
+         DLink.forEach( d => { 
+            // d.addEventListener( "touchstart", ev => {
+            d.addEventListener( "dragstart", ev => {
+               switch( d.innerText ) {
+               case "01": {
+                  d.title = "oi";
+               }
+                  break;
+               }
+            } );
+         } );
+      }
+      render() {
+      }
+   }
+   window.customElements.define( "drawer-home", DrawerHome );
+
+   // DLink.forEach( d => { 
+   //    // d.addEventListener( "touchstart", ev => {
+   //    d.addEventListener( "dragstart", ev => {
+   //       switch( d.innerText ) {
+   //       case "01": {
+   //          d.title = "oi";
+   //       }
+   //          break;
+   //       }
+   //    } );
+   // } );
 
    start.addEventListener( "click", ev => {
       open( "./index.html", "_self" );
