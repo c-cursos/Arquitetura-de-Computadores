@@ -7,7 +7,8 @@ const
    _e = ( ...args ) => console.error( ...args )
 ;
 
-window.addEventListener( "load", () => {
+// window.addEventListener( "load", () => {
+addEventListener( "load", () => {
    const 
       NavLinks = $$( "navlink" ),
       C = $$( "[c]" ),
@@ -78,7 +79,8 @@ window.addEventListener( "load", () => {
    } ) );
 
    DLink.forEach( d => { 
-      d.addEventListener( "touchstart", ev => {
+      // d.addEventListener( "touchstart", ev => {
+      d.addEventListener( "dragstart", ev => {
          switch( d.innerText ) {
          case "01": {
             d.title = "oi";
