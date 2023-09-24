@@ -107,7 +107,20 @@ addEventListener( "load", () => {
             05
          </a>
          <sub-menu>05 - Portas Lógicas</sub-menu>
-      </d-link> `
+      </d-link>
+      <d-link>
+         <a href="./06 - Tipos de Memória.html">
+            06
+         </a>
+         <sub-menu>06 - Tipos de Memória</sub-menu>
+      </d-link>
+      <d-link>
+         <a href="./07 - Organização do Processador.html">
+            07
+         </a>
+         <sub-menu>07 - Organização do Processador</sub-menu>
+      </d-link>
+      `
    ;
 
 

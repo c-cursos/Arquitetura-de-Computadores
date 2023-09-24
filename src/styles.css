@@ -82,7 +82,7 @@ card {
 [grid] { display: grid; }
 [flex] { display: flex; }
 [blk] { display: block; }
-[grid="1/2"] { grid-template-columns: .5fr .5fr; }
+[grid="1/2"] { grid-template-columns: repeat( 2, 50% 50% ); }
 [grid="1/2"] > * { width: 100%; }
 
 grid > header {
@@ -126,9 +126,11 @@ box > :first-child {
    height: 100%;
 }
 
-b {
-   color: var(--green-dark);
-}
+b { color: var(--green-dark); }
+[mt] { margin-top: 5vw; }
+[mb] { margin-bottom: 5vw; }
+[pt] { padding-top: 5vw; }
+[pb] { padding-bottom: 5vw; }
 
 h1 { color: lightsalmon; }
 [t="1"] { font-size: 3em; }
@@ -143,7 +145,6 @@ t1, t2, t3, t4, t5, t6, t7 {
    word-wrap: break-word;
    color: #27f;
 }
-t { font-size: 1rem; font-weight: normal; }
 t1 { font-size: 3rem; color: #e33; }
 t2 { font-size: 2.5rem; color: #f29; }
 t3 { font-size: 2.25rem; }

@@ -1,69 +1,250 @@
 
 
-<!DOCTYPE html>
-<html lang='pt-br'>
-   <head>
-      <title>06 - Tipos de Memória</title>
-      
-      <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
-      <meta charset='UTF-8'>
-      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-      <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-      <link rel="stylesheet" href="./src/styles.css">
-      <script src="./src/script.js" defer></script>
-      <style>
-         [pix] { width: 100%; }
-         portas-logicas t {
-            font-size: .8rem !important;
-         } 
-      </style>
-   </head>
-   <body>
-      <appbar>
-         <appbar-body>
-            <appbar-brand></appbar-brand>
-            <t1></t1>
-            <appbar-options></appbar-options>
-         </appbar-body>
-      </appbar>
+   <!DOCTYPE html>
+   <html lang='pt-br'>
+      <head>
+         <title>06 - Tipos de Memória</title>
+         
+         <link rel='icon' href='src/pix/logo.svg' type='svg+xml'>
+         <meta charset='UTF-8'>
+         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+         <link rel="stylesheet" href="./src/styles.css">
+         <script src="./src/script.js" defer></script>
+         <style>
+            [pix] { width: 100%; }
+            portas-logicas t {
+               font-size: .8rem !important;
+            } 
+         </style>
+      </head>
+      <body>
+         <appbar>
+            <appbar-body>
+               <appbar-brand></appbar-brand>
+               <t1></t1>
+               <appbar-options></appbar-options>
+            </appbar-body>
+         </appbar>
 
-      <drawer>
-         <drawer-logo>
-            <img src="./src/pix/Ceo-logo.svg" alt="">
-         </drawer-logo>
-         <drawer-home></drawer-home>
+         <drawer>
+            <drawer-logo>
+               <img src="./src/pix/Ceo-logo.svg" alt="">
+            </drawer-logo>
+            <drawer-home></drawer-home>
+         </drawer>
 
-      <main>
-         <header bg="#16181c" center>
-            <h1 c="#459">Portas Lógicas e suas Funções</h1>
-            <small>
-            </small>
-            <banner>
-            </banner>
-         </header>
-         <card p="2vw">
-            <header>
-               <h2>Elementos eletrônicos</h2>
+         <main>
+            <header bg="#16181c" center>
+               <h1 c="#459">Subsistemas de memória</h1>
                <small>
                </small>
+               <banner>
+               </banner>
             </header>
+            <card p="2vw">
+               <header>
+                  <h2>Contextualização</h2>
+                  <small>
+                     PC liga => CPU inicia e busca:
+                     <ol>
+                        <li>
+                           <b>ROM</b>
+                           <small></small>
+                        </li>
+                        <li>
+                           <b>SSD</b>
+                           <small>Memória secundária</small>
+                        </li>
+                        <li>
+                           <b>SO</b>
+                           <small>Sistema operacional</small>
+                        </li>
+                        <li>
+                           <b>RAM</b>
+                           <small>Memória principal</small>
+                        </li>
+                     </ol>
+                     para que o processador possa executar os programas, seus dados devem estar armazenados na memória
+                  </small>
+               </header>
+               
+               <hierarquia-de-memorias card bg="#fff3">
+                  <h3 center>Hierarquia de memórias</h3>
+                  <card grid="1/2" fsz="clamp( 10px, 2vw, 16px )" w="90%">
+                     <ol w="50%">
+                        <li>
+                           <b>Registradores</b>
+                           <small></small>
+                        </li>
+                        <li>
+                           <b>Cache</b>
+                           <small></small>
+                        </li>
+                        <li>
+                           <b>Memória principal: </b>
+                           <small>
+                              RAM <i><b>volátil</b></i> <br>
+                              ROM <i><b>não volátil</b></i>
+                           </small>
+                        </li>
+                        <li>
+                           <b>Memória secundária: </b>
+                           <small>HD, SSD, CD/DVD, pen drive</small>
+                        </li>
+                     </ol>
+                     <ol w="50%">
+                        <li>quanto mais alto mais caro, menos armazenamento e mais rápido</li>
+                        <li>quanto mais baixo mais barato e mais armazenamento e mais lento</li>
+                     </ol>
+                  </card>
 
-            <questoes>
-               <h2 center>Questões</h2>
+               </hierarquia-de-memorias>
+               <quadro-de-memorias card>
+                  <h3>Quadro de memórias</h3>
+                  <tabela tabela="repeat( 6, 16.6% )" fsz="clamp(10px, .7rem, 16px)">
+                     <t></t>
+                     <t>Localização </t>
+                     <t>é volátil</t>
+                     <t>velocidade</t>
+                     <t>armazenamento</t>
+                     <t>custo por bit</t>
+                     
+                     <t><b>Registrador</b></t>
+                     <t>Processador</t>
+                     <t>Sim</t>
+                     <t>Muito alta</t>
+                     <t>Bytes</t>
+                     <t>muito alto</t>
+                     
+                     <t><b>Cache</b></t>
+                     <t>Processador</t>
+                     <t>Sim</t>
+                     <t>alta</t>
+                     <t>KB</t>
+                     <t>alto</t>
+                     
+                     <t><b>Principal</b></t>
+                     <t>Placa-Mãe</t>
+                     <t>RAM sim <br>ROM não</t>
+                     <t>rápida e menor q o CPU</t>
+                     <t>MB e GB</t>
+                     <t>médio</t>
+                     
+                     <t><b>Secundária</b></t>
+                     <t>HD, SSD ...</t>
+                     <t>não</t>
+                     <t>baixa</t>
+                     <t>GB e TB</t>
+                     <t>baixo</t>
+                     
+                  </tabela> 
+               </quadro-de-memorias>
 
-               <h3>Questão 1</h3>
-               <img pix src="./src/pix/" alt="" >
+               <registradores card>
+                  <h3 bg="darkgreen" p="1vw">Registradores</h3>
+                  <ul>
+                     <li>volátil</li>
+                     <li>extremamente rápido</li>
+                     <li>disponibilidade limitada</li>
+                     <li>dentro do CPU</li>
+                     <li>armazena dados temporarios para para o CPU processar</li>
+                  </ul>
+               </registradores>
 
-               <h3>Questão 2</h3>
-               <img pix src="./src/pix/" alt="" >
+               <cache card>
+                  <h3 bg="darkgreen" p="1vw">Cache</h3>
+                  <ul>
+                     <li>volátil</li>
+                     <li>muito rápida</li>
+                     <li><b>L1:</b> Cache interna</li>
+                     <li><b>L2:</b> Cache interna</li>
+                     <li>auxiliar da RAM por ser mais rápida</li>
+                     <li><b>Função: </b>acelerar a velocidade de transferencia das informações entre CPU e memória principal</li>
+                  </ul>
 
-               <h3>Questão 3</h3>
-               <img pix src="./src/pix/" alt="" >
-            </questoes>
+                  <cache-l1 card bg="#fff2">
+                     <h4 center>Cache interna L1</h4>
+                     <small>sub-dividida em dois modulos</small>
+                     <ol>
+                        <li>
+                           <b>L1d:</b> <br>
+                           16 - 128 KB <br>
+                           <i>dados</i>
+                        </li>
+                        <li>
+                           <b>L1i:</b> <br>
+                           16 - 64 KB <br>
+                           <i>instruções</i>
+                        </li>
+                     </ol>
+                  </cache-l1>
 
-         </card>
-      </main>
-   </body>
-</html>
+                  <cache-l2 card bg="#fff1">
+                     <h4 center>Cache externa L2</h4>
+                     <small><b>SRAM</b> Static Random Access Memory</small>
+                     <t>2 - 8 MB</t>
+                     <br><br>
+                     <small>
+                        faz a comunicação com a memória principal <b>DRAM</b>
+                        Dynamic Random Access Memory
+                     </small>
+                  </cache-l2>
+               </cache>
+
+               <memoria-principal card>
+                  <!-- <h1 p="2vw"> </h1> -->
+                  <h3 pt>Memória Principal</h3>
+                  <ul>
+                     <li>dá acesso às memórias secundárias</li>
+                     <li>aloca dados e instruções de programas</li>
+                     <li>volátil</li>
+                     <li>
+                        a memória RAM é denominada <b>DRAM</b> 
+                        por precisar de refrescamento da memória
+                     </li>
+                     <li>as DRAMs consomem muitos ciclos do processador para a realimentação</li>
+                  </ul>
+                  <img src="./src/pix/memorias/padrões de RAM.png" alt="" pix=""><br>
+                  <small>
+                     a frequencia do ciclo de clock é medido em Hertz (HZ) 
+                     <br><br>
+                     diferenças entre <b>DDR2, DDR3 ...</b>
+                     está na velocidade, latência, voltagem ...
+                  </small>
+                  <img src="./src/pix/memorias/DIMM.png" alt="" pix="">
+               </memoria-principal>
+
+               <memoria-rom card pt>
+                  <h3 pt>Memória ROM</h3>
+                  <small center>Read Only Memory</small>
+                  <br>
+                  <img src="./src/pix/memorias/ROM.png" alt="" pix="">
+               </memoria-rom>
+
+               <memoria-secundaria card pt>
+                  <h3 pt>Memória Secundária</h3>
+                  <img src="./src/pix/memorias/memórias secundárias.png" alt="" pix="">
+               </memoria-secundaria>
+
+
+
+               <questoes card pt>
+                  <h2 center pt>Questões</h2>
+
+                  <h3>Questão 1</h3>
+                  <img pix src="./src/pix/" alt="" >
+
+                  <h3>Questão 2</h3>
+                  <img pix src="./src/pix/" alt="" >
+
+                  <h3>Questão 3</h3>
+                  <img pix src="./src/pix/" alt="" >
+               </questoes>
+
+            </card>
+         </main>
+      </body>
+   </html>
 
