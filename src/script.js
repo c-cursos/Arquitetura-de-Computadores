@@ -21,6 +21,7 @@ window.addEventListener( "load", () => {
       H = $$( "[h]" ),
       M = $$( "[m]" ),
       P = $$( "[p]" ),
+      Fsz = $$( "[fsz]" ),
       Columns = $$( "[columns]" ),
       Rows = $$( "[rows]" ),
       Tabela = $$( "[tabela]" ),
@@ -68,6 +69,7 @@ window.addEventListener( "load", () => {
    H.forEach( v => v.style.height = v.getAttribute( "h" ) );
    M.forEach( v => v.style.margin = v.getAttribute( "m" ) );
    P.forEach( v => v.style.padding = v.getAttribute( "p" ) );
+   Fsz.forEach( v => v.style.fontSize = v.getAttribute( "fsz" ) );
    Columns.forEach( v => v.style.gridTemplateColumns = v.getAttribute( "columns" ) );
    Rows.forEach( v => v.style.gridTemplateRows = v.getAttribute( "rows" ) );
    Tabela.forEach( v => v.style.gridTemplateColumns = v.getAttribute( "tabela" ) );

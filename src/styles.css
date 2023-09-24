@@ -213,9 +213,14 @@ center, [center] {
 tabela {
    display: grid;
    grid-template-columns: repeat(3, 100px);
+   width: 95%;
    margin: 0 auto;
 }
-[tabela] { display: grid; }
+[tabela] { 
+   display: grid;
+   width: 95%;
+   margin: 0 auto;
+}
 tabela > *,
 [tabela] > * {
    display: grid;
