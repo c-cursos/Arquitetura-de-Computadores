@@ -120,6 +120,12 @@ addEventListener( "load", () => {
          </a>
          <sub-menu>07 - Organização do Processador</sub-menu>
       </d-link>
+      <d-link>
+         <a href="./08 - Tipos de Barramentos.html">
+            08
+         </a>
+         <sub-menu>08 - Tipos de Barramentos</sub-menu>
+      </d-link>
       `
    ;
 

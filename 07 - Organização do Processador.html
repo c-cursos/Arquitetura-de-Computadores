@@ -37,18 +37,105 @@
 
          <main>
             <header bg="#16181c" center>
-               <h1 c="#459">Subsistemas de memória</h1>
+               <h1 c="#459">Organização do Processador</h1>
                <small>
                </small>
                <banner>
                </banner>
             </header>
             <card p="2vw">
-               <header>
-                  <h2>Contextualização</h2>
-                  <small>
-                  </small>
-               </header>
+               <cpu>
+                  <h2>CPU</h2>
+                  <p>
+                     responsável por processar e executar os programas armazenados
+                     na memória principal
+                  </p>
+                  <p>
+                     é composta por 3 partes distintas:
+                     <ul>
+                        <li>Registradores</li>
+                        <li>Unidade de Controle <b>UC</b></li>
+                        <li>Unidade Lógica Aritmética <b>ULA</b></li>
+                     </ul>
+                  </p>
+                  <p>
+                     pode ser dividida em 2 categorias funcionais:
+                     <ul>
+                        <li>
+                           <b>Unidade Funcional de Controle</b>
+                           <br>
+                           <small>agrupa: (UC)</small>   
+                        </li>
+                        <li>
+                           <b>Unidade Funcional de Processamento</b>
+                           <br>
+                           <small>agrupa: (registradores e ULA)</small>   
+                        </li>
+                     </ul>
+                  </p>
+
+                  <diagrama-de-funcionamento-da-cpu>
+                     <h3 pt="" center>Diagrama de Funcionamento Da CPU</h3>
+                     <img src="./src/pix/CPU/Diagama de Funcionamento Da CPU.png" alt="" pix="">
+                  </diagrama-de-funcionamento-da-cpu>
+                     
+                  <unidade-funcional-de-processamento>
+                     <h3 pt="">Unidade Funcional de Processamento</h3>
+                     <img src="./src/pix/CPU/processamento.png" alt="" pix="">
+                  </unidade-funcional-de-processamento>
+
+                  <ula>
+                     <p>
+                        considerada o "núcleo" da CPU
+                     </p>
+                     <b>exemplos de operações executadas pela ULA:</b>
+                     <ul>
+                        <li>soma</li>
+                        <li>multiplicação </li>
+                        <li>operações lógicas: 
+                           <b><small>( AND, OR, NOT, XOR ... )</small></b>
+                        </li>
+                        <li>incremento</li>
+                        <li>decremento</li>
+                        <li>outras ...</li>
+                     </ul>
+                     <p>
+                        não lida diretamente com as intruções do programa,
+                        mas recebe as intruções da UC
+                     </p>
+                  </ula>
+
+                  <registradores>
+                     <h3>Registradores</h3>
+                     <img src="./src/pix/CPU/registradores.png" alt="" pix="">   
+                  </registradores>
+
+                  <unidade-funcional-de-controle>
+                     <h3>Unidade Funcional de Controle</h3>
+                     <img src="./src/pix/CPU/unidade funcional de controle.png" alt="" pix="">
+                  </unidade-funcional-de-controle>
+
+                  <ci-e-ri>
+                     <h3 pt="">CI e RI</h3>
+                     <img src="./src/pix/CPU/CI e RI.png" alt="" pix="">
+                  </ci-e-ri>
+
+                  <decodificador-de-instrucoes>
+                     <h3 pt="">Decodificador de Instruções</h3>
+                     <img src="./src/pix/CPU/decodificador de instruções.png" alt="" pix="">   
+                  </decodificador-de-instrucoes>
+
+                  <rdm-e-rem>
+                     <h3 pt="">RDM e REM</h3>
+                     <img src="./src/pix/CPU/rdm e rem.png" alt="" pix="">   
+                  </rdm-e-rem>
+
+                  <consideracoes-finais>
+                     <h3 pt="">Considerações Finais</h3>
+                     <img src="./src/pix/CPU/considerações finais.png" alt="" pix="">   
+                  </consideracoes-finais>
+
+               </cpu>
                
 
 
@@ -57,13 +144,25 @@
                   <h2 center pt>Questões</h2>
 
                   <h3>Questão 1</h3>
-                  <img pix src="./src/pix/" alt="" >
+                  <img pix src="./src/pix/CPU/qst 1.png" alt="" >
+                  <oc>
+                     <h5 c="green">Resposta</h5>
+                     <t>B</t>
+                  </oc>
 
                   <h3>Questão 2</h3>
-                  <img pix src="./src/pix/" alt="" >
+                  <img pix src="./src/pix/CPU/qst 2.png" alt="" >
+                  <oc>
+                     <h5 c="green">Resposta</h5>
+                     <t>D</t>
+                  </oc>
 
                   <h3>Questão 3</h3>
-                  <img pix src="./src/pix/" alt="" >
+                  <img pix src="./src/pix/CPU/qst 3.png" alt="" >
+                  <oc>
+                     <h5 c="green">Resposta</h5>
+                     <t>D</t>
+                  </oc>
                </questoes>
 
             </card>

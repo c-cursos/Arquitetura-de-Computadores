@@ -172,6 +172,9 @@ li::marker {
 }
 /* ul>li::marker { content: "⦿ "; color: deeppink; } */
 
+
+[pix] { width: 100%; }
+
 oc {
    display: block;
 }
