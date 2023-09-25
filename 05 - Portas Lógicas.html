@@ -36,6 +36,34 @@
          portas-logicas t {
             font-size: .8rem !important;
          } 
+         portas-logicas {
+            position: relative;
+         }
+         t-not, t-and, t-nand, t-or, t-xor,
+         t-nor, t-xnor {
+            position: absolute;
+            top: 0;
+            width: calc( 100vw - 48px );
+            height: 90vh;
+            margin: 0 auto;
+            background: #fff2;
+            backdrop-filter: blur( 12px );
+            display: none;
+            align-content: start;
+         }
+         t-not > h2, t-and > h2, t-nand > h2, 
+         t-or > h2, t-xor > h2,
+         t-nor > h2, t-xnor > h2 {
+            background: #ff8c0050;
+            backdrop-filter: blur( 12px );
+            padding: 2vw;
+         }
+         t-not > tabela, t-and > tabela, t-nand > tabela, 
+         t-or > tabela, t-xor > tabela,
+         t-nor > tabela, t-xnor > tabela {
+            width: 100%;
+            aspect-ratio: 2/1.5;
+         }
       </style>
    </head>
    <body>
@@ -113,48 +141,153 @@
                   <t>Symbol</t>
                   <t>Equação Booleana</t>
                   
-                  <t>NOT</t>
-                  <t>
+                  <t not>NOT</t>
+                  <t not>
                      <img pix pix src="./src/pix/logic/NOT-.png">
                   </t>
-                  <t>Q = Ã</t>
+                  <t not>Q = Ã</t>
 
-                  <t>AND</t>
-                  <t>
+                  <t and>AND</t>
+                  <t and>
                      <img pix pix src="./src/pix/logic/AND-.png">
                   </t>
-                  <t>Q = A.B</t>
+                  <t and>Q = A.B</t>
 
-                  <t>NAND</t>
-                  <t>
+                  <t nand>NAND</t>
+                  <t nand>
                      <img pix pix src="./src/pix/logic/NAND-.png">
                   </t>
-                  <t>Q = Ã.~B</t>
+                  <t nand>Q = Ã.~B</t>
 
-                  <t>OR</t>
-                  <t>
+                  <t or>OR</t>
+                  <t or>
                      <img pix pix src="./src/pix/logic/OR-.png">
                   </t>
-                  <t>Q = A + B</t>
+                  <t or>Q = A + B</t>
 
-                  <t>NOR</t>
-                  <t>
+                  <t nor>NOR</t>
+                  <t nor>
                      <img pix pix src="./src/pix/logic/NOR-.png">
                   </t>
-                  <t>Q = Ã + ~B</t>
+                  <t nor>Q = Ã + ~B</t>
 
-                  <t>XOR</t>
-                  <t>
+                  <t xor>XOR</t>
+                  <t xor>
                      <img pix pix src="./src/pix/logic/XOR-.png">
                   </t>
-                  <t>Q = A &oplus; B</t>
+                  <t xor>Q = A &oplus; B</t>
 
-                  <t>XNOR</t>
-                  <t>
+                  <t xnor>XNOR</t>
+                  <t xnor>
                      <img pix pix src="./src/pix/logic/XNOR-.png">
                   </t>
-                  <t>Q = Ã ⊕ ~B</t>
+                  <t xnor>Q = Ã ⊕ ~B</t>
                </list>
+
+               <t-not>
+                  <h2>NOT</h2>
+                  <tabela tabela="repeat(2, 50%)">
+                     <t>A </t>
+                     <t>Y = Ã</t>
+                     
+                     <t>0</t>
+                     <t>1</t>
+                     
+                     <t>1</t>
+                     <t>0</t>
+                     
+                  </tabela>
+               </t-not>
+
+               <t-and>
+                  <h2>AND</h2>
+                  <tabela tabela="repeat(3, 33.3%)">
+                     <t>A</t>
+                     <t>B</t>
+                     <t>Y = A.B</t>
+
+                     <t>1</t>
+                     <t>1</t>
+                     <t>1</t>
+                     
+                     <t>1</t>
+                     <t>0</t>
+                     <t>0</t>
+                     
+                     <t>0</t>
+                     <t>1</t>
+                     <t>0</t>
+                     
+                     <t>0</t>
+                     <t>0</t>
+                     <t>0</t>
+                     
+                  </tabela>
+               </t-and>
+
+               <t-nand>
+                  <h2>NAND</h2>
+               </t-nand>
+               
+               <t-or>
+                  <h2>OR</h2>
+                  <tabela tabela="repeat(3, 33.3%)">
+                     <t>A</t>
+                     <t>B</t>
+                     <t>Y = A + B</t>
+
+                     <t>1</t>
+                     <t>1</t>
+                     <t>1</t>
+                     
+                     <t>1</t>
+                     <t>0</t>
+                     <t>1</t>
+                     
+                     <t>0</t>
+                     <t>1</t>
+                     <t>1</t>
+                     
+                     <t>0</t>
+                     <t>0</t>
+                     <t>0</t>
+                     
+                  </tabela>
+               </t-or>
+               
+               <t-nor>
+                  <h2>NOR</h2>
+               </t-nor>
+               
+               <t-xor>
+                  <h2>XOR</h2>
+                  <tabela tabela="repeat(3, clamp(100px, 33%, 500px))">
+                     <t>A </t>
+                     <t>B </t>
+                     <t>Y = A ⊕ B</t>
+
+                     <t>1</t>
+                     <t>1</t>
+                     <t>0</t>
+                     
+                     <t>1</t>
+                     <t>0</t>
+                     <t>1</t>
+                     
+                     <t>0</t>
+                     <t>1</t>
+                     <t>1</t>
+                     
+                     <t>0</t>
+                     <t>0</t>
+                     <t>0</t>
+                     
+                  </tabela>
+               </t-xor>
+               
+               <t-xnor>
+                  <h2>XNOR</h2>
+               </t-xnor>
 
                <precedencia>
                   <h3 pt="">Precedencia</h3>
@@ -165,6 +298,95 @@
                      <li>OR</li>
                   </ol>
                </precedencia>
+               
+               <and>
+                  <oc>
+                     <it>
+                        <h4>Porta AND</h4>
+                     </it>
+                     <it>
+                        <img pix src="./src/pix/portas/AND.png" > 
+                        <br>
+                        <tabela tabela="repeat(3, 33.3%)">
+                           <t>A</t>
+                           <t>B</t>
+                           <t>Y = A.B</t>
+
+                           <t>1</t>
+                           <t>1</t>
+                           <t>1</t>
+                           
+                           <t>1</t>
+                           <t>0</t>
+                           <t>0</t>
+                           
+                           <t>0</t>
+                           <t>1</t>
+                           <t>0</t>
+                           
+                           <t>0</t>
+                           <t>0</t>
+                           <t>0</t>
+                           
+                        </tabela>
+                     </it>
+                  </oc>
+               </and>
+
+               <xor>
+                  <oc>
+                     <it>
+                        <h4>Porta XOR</h4>
+                     </it>
+                     <it>
+                        <img pix src="./src/pix/portas/XOR.png" >
+                        <tabela tabela="repeat(3, clamp(100px, 33%, 500px))">
+                           <t>A </t>
+                           <t>B </t>
+                           <t>Y = A ⊕ B</t>
+                           
+                           <t>1</t>
+                           <t>1</t>
+                           <t>0</t>
+                           
+                           <t>1</t>
+                           <t>0</t>
+                           <t>1</t>
+                           
+                           <t>0</t>
+                           <t>1</t>
+                           <t>1</t>
+                           
+                           <t>0</t>
+                           <t>0</t>
+                           <t>0</t>
+                           
+                        </tabela>
+                     </it>
+                  </oc>
+               </xor>
+               
+               <not>
+                  <oc>
+                     <it>
+                        <h4>Porta NOT</h4>
+                     </it>
+                     <it>
+                        <img pix src="./src/pix/portas/NOT.png" ><br>
+                        <tabela tabela="repeat(2, 50%)">
+                           <t>A </t>
+                           <t>Y = Ã</t>
+                           
+                           <t>0</t>
+                           <t>1</t>
+                           
+                           <t>1</t>
+                           <t>0</t>
+                           
+                        </tabela>
+                     </it>
+                  </oc>
+               </not>
 
                <ci-logicos>
                   <h3>Circuitos Lógicos</h3>
@@ -175,144 +397,6 @@
                   <h3>Expressões Lógicas</h3>
                   <img pix src="./src/pix/portas/expressões lógicas.png" >
                </expressoes-logicas>
-
-               <ul>
-                  <li>
-                     <and>
-                        <oc>
-                           <it>
-                              <h4>Porta AND
-                              </h4>
-                           </it>
-                           <it>
-                              <img pix src="./src/pix/portas/AND.png" > 
-                              <br>
-                              <tabela tabela="repeat(3, 33.3%)">
-                                 <t>A</t>
-                                 <t>B</t>
-                                 <t>Y = A.B</t>
-
-                                 <t>1</t>
-                                 <t>1</t>
-                                 <t>1</t>
-                                 
-                                 <t>1</t>
-                                 <t>0</t>
-                                 <t>0</t>
-                                 
-                                 <t>0</t>
-                                 <t>1</t>
-                                 <t>0</t>
-                                 
-                                 <t>0</t>
-                                 <t>0</t>
-                                 <t>0</t>
-                                 
-                              </tabela>
-                           </it>
-                        </oc>
-                     </and>
-                  </li>
-
-                  <li>
-                     <or>
-                        <oc>
-                           <it>
-                              <h4>Porta OR
-                              </h4>
-                           </it>
-                           <it p="1vw">
-                              <img pix src="./src/pix/portas/OR.png" >
-                              <br>
-                              <tabela tabela="repeat(3, 33.3%)">
-                                 <t>A</t>
-                                 <t>B</t>
-                                 <t>Y = A + B</t>
-
-                                 <t>1</t>
-                                 <t>1</t>
-                                 <t>1</t>
-                                 
-                                 <t>1</t>
-                                 <t>0</t>
-                                 <t>1</t>
-                                 
-                                 <t>0</t>
-                                 <t>1</t>
-                                 <t>1</t>
-                                 
-                                 <t>0</t>
-                                 <t>0</t>
-                                 <t>0</t>
-                                 
-                              </tabela>
-                           </it>
-                        </oc>
-                     </or>
-                  </li>
-
-                  <li>
-                     <xor>
-                        <oc>
-                           <it>
-                              <h4>Porta XOR
-                              </h4>
-                           </it>
-                           <it>
-                              <img pix src="./src/pix/portas/XOR.png" >
-                              <tabela tabela="repeat(3, clamp(100px, 33%, 500px))">
-                                 <t>A </t>
-                                 <t>B </t>
-                                 <t>Y = A ⊕ B</t>
-
-                                 <t>1</t>
-                                 <t>1</t>
-                                 <t>0</t>
-                                 
-                                 <t>1</t>
-                                 <t>0</t>
-                                 <t>1</t>
-                                 
-                                 <t>0</t>
-                                 <t>1</t>
-                                 <t>1</t>
-                                 
-                                 <t>0</t>
-                                 <t>0</t>
-                                 <t>0</t>
-                                 
-                              </tabela>
-                           </it>
-                        </oc>
-                     </xor>
-                  </li>
-
-                  <li>
-                     <not>
-                        <oc>
-                           <it>
-                              <h4>
-                                 Porta NOT
-                              </h4>
-                           </it>
-                           <it>
-                              <img pix src="./src/pix/portas/NOT.png" ><br>
-                              <tabela tabela="repeat(2, 50%)">
-                                 <t>A </t>
-                                 <t>Y = Ã</t>
-                                 
-                                 <t>0</t>
-                                 <t>1</t>
-                                 
-                                 <t>1</t>
-                                 <t>0</t>
-                                 
-                              </tabela>
-                           </it>
-                        </oc>
-                     </not>
-                  </li>
-               </ul>
             </portas-logicas>
 
             <questoes>
@@ -478,6 +562,117 @@
             </gates-list> -->
          </card>
       </main>
+      
+      
+
+      <script>
+         window.addEventListener( "load", ev => {
+            let 
+               not = $$( "t[not]" ),
+               and = $$( "t[and]" ),
+               nand = $$( "t[nand]" ),
+               or = $$( "t[or]" ),
+               nor = $$( "t[nor]" ),
+               xor = $$( "t[xor]" ),
+               xnor = $$( "t[xnor]" ),
+
+               TList = [
+                  Tnot = $( "t-not" ),
+                  Tand = $( "t-and" ),
+                  Tnand = $( "t-nand" ),
+                  Tor = $( "t-or" ),
+                  Tnor = $( "t-nor" ),
+                  Txor = $( "t-xor" ),
+                  Txnor = $( "t-xnor" )
+               ]
+               
+            ;
+
+
+            TList.forEach( c => c.addEventListener( "click", ev => {
+               c.style.display = "none";
+            } ) );
+
+            not.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "grid"; 
+                  Tand.style.display = "none";
+                  Tnand.style.display = "none";
+                  Tor.style.display = "none";
+                  Txor.style.display = "none";
+                  Tnor.style.display = "none";
+                  Txnor.style.display = "none";
+               } );
+            } );
+            and.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "none"; 
+                  Tand.style.display = "grid";
+                  Tnand.style.display = "none";
+                  Tor.style.display = "none";
+                  Txor.style.display = "none";
+                  Tnor.style.display = "none";
+                  Txnor.style.display = "none";
+               } );
+            } );
+            nand.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "none"; 
+                  Tand.style.display = "none";
+                  Tnand.style.display = "grid";
+                  Tor.style.display = "none";
+                  Txor.style.display = "none";
+                  Tnor.style.display = "none";
+                  Txnor.style.display = "none";
+               } );
+            } );
+            or.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "none"; 
+                  Tand.style.display = "none";
+                  Tnand.style.display = "none";
+                  Tor.style.display = "grid";
+                  Txor.style.display = "none";
+                  Tnor.style.display = "none";
+                  Txnor.style.display = "none";
+               } );
+            } );
+            xor.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "none"; 
+                  Tand.style.display = "none";
+                  Tnand.style.display = "none";
+                  Tor.style.display = "none";
+                  Txor.style.display = "grid";
+                  Tnor.style.display = "none";
+                  Txnor.style.display = "none";
+               } );
+            } );
+            nor.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "none"; 
+                  Tand.style.display = "none";
+                  Tnand.style.display = "none";
+                  Tor.style.display = "none";
+                  Txor.style.display = "none";
+                  Tnor.style.display = "grid";
+                  Txnor.style.display = "none";
+               } );
+            } );
+            xnor.forEach( v => {
+               v.addEventListener( "click", ev => {
+                  Tnot.style.display = "none"; 
+                  Tand.style.display = "none";
+                  Tnand.style.display = "none";
+                  Tor.style.display = "none";
+                  Txor.style.display = "none";
+                  Tnor.style.display = "none";
+                  Txnor.style.display = "grid";
+               } );
+            } );
+
+         } );
+      </script>
    </body>
 </html>
 
