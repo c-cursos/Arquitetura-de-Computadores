@@ -56,7 +56,11 @@
          t-nor > h2, t-xnor > h2 {
             background: #ff8c0050;
             backdrop-filter: blur( 12px );
+            text-shadow: #0005 0 0 5px;
             padding: 2vw;
+            display: grid;
+            grid-template-columns: repeat(2, 50% 50%);
+            place-items: center;            
          }
          t-not > tabela, t-and > tabela, t-nand > tabela, 
          t-or > tabela, t-xor > tabela,
@@ -185,7 +189,9 @@
                </list>
 
                <t-not>
-                  <h2>NOT</h2>
+                  <h2>NOT
+                     <img src="./src/pix/logic/NOT.svg" alt="">
+                  </h2>
                   <tabela tabela="repeat(2, 50%)">
                      <t>A </t>
                      <t>Y = Ã</t>
@@ -200,7 +206,9 @@
                </t-not>
 
                <t-and>
-                  <h2>AND</h2>
+                  <h2>AND
+                     <img src="./src/pix/logic/AND.svg" alt="">
+                  </h2>
                   <tabela tabela="repeat(3, 33.3%)">
                      <t>A</t>
                      <t>B</t>
@@ -226,11 +234,15 @@
                </t-and>
 
                <t-nand>
-                  <h2>NAND</h2>
+                  <h2>NAND
+                     <img src="./src/pix/logic/NAND.svg" alt="">
+                  </h2>
                </t-nand>
                
                <t-or>
-                  <h2>OR</h2>
+                  <h2>OR
+                     <img src="./src/pix/logic/OR.svg" alt="">
+                  </h2>
                   <tabela tabela="repeat(3, 33.3%)">
                      <t>A</t>
                      <t>B</t>
@@ -256,11 +268,15 @@
                </t-or>
                
                <t-nor>
-                  <h2>NOR</h2>
+                  <h2>NOR
+                     <img src="./src/pix/logic/NOR.svg" alt="">
+                  </h2>
                </t-nor>
                
                <t-xor>
-                  <h2>XOR</h2>
+                  <h2>XOR
+                     <img src="./src/pix/logic/XOR.svg" alt="">
+                  </h2>
                   <tabela tabela="repeat(3, clamp(100px, 33%, 500px))">
                      <t>A </t>
                      <t>B </t>
@@ -286,7 +302,9 @@
                </t-xor>
                
                <t-xnor>
-                  <h2>XNOR</h2>
+                  <h2>XNOR
+                     <img src="./src/pix/logic/XNOR.svg" alt="">
+                  </h2>
                </t-xnor>
 
                <precedencia>

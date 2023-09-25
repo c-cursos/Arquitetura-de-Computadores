@@ -95,19 +95,19 @@ addEventListener( "load", () => {
       </d-link>
       <d-link>
          <a href="./02 - Componentes do Computador.html">
-            02
+            <small>comps</small>
          </a>
          <sub-menu>02 - Componentes do Computador</sub-menu>
       </d-link>
       <d-link>
          <a href="./03 - Sistemas de Numeração.html">
-            03
+            <small>num</small>
          </a>
          <sub-menu>03 - Sistemas de Numeração</sub-menu>
       </d-link>
       <d-link>
          <a href="./04 - Tabela Verdade.html">
-            04
+            <small>true</small>
          </a>
          <sub-menu>04 - Tabela Verdade</sub-menu>
       </d-link>
@@ -119,13 +119,13 @@ addEventListener( "load", () => {
       </d-link>
       <d-link>
          <a href="./06 - Tipos de Memória.html">
-            06
+            <small>MEM</small>
          </a>
          <sub-menu>06 - Tipos de Memória</sub-menu>
       </d-link>
       <d-link>
          <a href="./07 - Organização do Processador.html">
-            07
+            <small>CPU</small>
          </a>
          <sub-menu>07 - Organização do Processador</sub-menu>
       </d-link>
