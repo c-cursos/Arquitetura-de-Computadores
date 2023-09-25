@@ -39,7 +39,11 @@ addEventListener( "load", () => {
             place-items: center;
             width: 90%;
             margin: 0 auto;
-            background: #313339;
+            background-image: radial-gradient(
+               circle at center,
+               #21232950,
+               #313339
+            );
             aspect-ratio: 1/1;
             border-radius: 55rem;
             overflow: hidden;
@@ -75,6 +79,11 @@ addEventListener( "load", () => {
             pointer-events: auto;
             transition: all 0.3s ease;
          }
+         img {
+            display: grid;
+            width: 90%;
+            margin: 0 auto;
+         }
       </style>
       <d-link>
       <a href="./01 - evolução dos computadores.html">
@@ -104,7 +113,7 @@ addEventListener( "load", () => {
       </d-link>
       <d-link>
          <a href="./05 - Portas Lógicas.html">
-            05
+            <img src="./src/pix/logic/AND.svg">
          </a>
          <sub-menu>05 - Portas Lógicas</sub-menu>
       </d-link>
