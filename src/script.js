@@ -131,7 +131,7 @@ addEventListener( "load", () => {
       </d-link>
       <d-link>
          <a href="./08 - Tipos de Barramentos.html">
-            08
+            <img src="./src/pix/icons/bus.png">
          </a>
          <sub-menu>08 - Tipos de Barramentos</sub-menu>
       </d-link>
@@ -237,6 +237,9 @@ addEventListener( "load", () => {
 
    start.addEventListener( "click", ev => {
       open( "./index.html", "_self" );
+   } );
+   start.addEventListener( "contextmenu", ev => {
+      open( "https://www.youtube.com/playlist?list=PL866_LrQxNVipiEgWtJMK5Fcgc6IBfVvc", "_self" );
    } );
 
 } );
